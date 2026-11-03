@@ -1,6 +1,5 @@
+import { reqHandler } from '../dist/web/server/server.mjs';
 
-module.exports = async (req, res) => {
-  const { reqHandler } = await import('../dist/web/server/server.mjs');
-
+export default function handler(req, res) {
   return reqHandler(req, res);
-};
+}
