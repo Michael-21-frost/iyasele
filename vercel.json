@@ -1,0 +1,21 @@
+
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/web/browser",
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/api"
+    }
+  ],
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "dist/web/**"
+    }
+  }
+}
